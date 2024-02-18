@@ -1,6 +1,8 @@
+// set imports
 const fileSystem = require('fs').promises;
 const { v1: uuidv1 } = require('uuid');
 
+// retrieve data, return parsed data
 class NoteStore {
     async retrieveData() {
         try {
@@ -11,6 +13,7 @@ class NoteStore {
         }
     }
 
+    // save data, update contents of file with new data
     async saveData(notes) {
         try {
             await fileSystem.writeFile('db/db.json', JSON.stringify(notes));
@@ -19,6 +22,8 @@ class NoteStore {
         }
     }
 
+
+    // retrieve data from storage with "retrieveData" method, checks for array and returns it
     async fetchNotes() {
         try {
             const notes = await this.retrieveData();
@@ -28,6 +33,8 @@ class NoteStore {
         }
     }
 
+
+    // create new note
     async createNote(note) {
         const { title, text } = note;
         if (!title || !text) {
@@ -42,6 +49,8 @@ class NoteStore {
         return newNote;
     }
 
+
+    // delete note
     async delteNote(id) {
         const notes = await this.fetchNotes();
         const updatedNotes = notes.filter((note) => note.id !== id);
