@@ -24,4 +24,10 @@ A use case for this would be if you're anything like myself, forgetful. This app
 
 ## Screenshot
 
+![alt text](<note taker screenshot.png>)
+
 ## Link
+
+heroku link: https://tranquil-earth-05427-9d9bf3c14ed5.herokuapp.com/noteshttps://github.com/zjw1239/note-taker
+
+github link: https://github.com/zjw1239/note-taker
