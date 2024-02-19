@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeNote = {};
 
   const getNotes = () =>
-    fetch('/api/notes', {
+    fetch('../../db/notes', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
