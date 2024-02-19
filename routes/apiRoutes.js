@@ -4,7 +4,7 @@ const noteStorage = require('../db/notes');
 
 
 // get notes from database
-router.get('/notes', (req, res) => {
+router.get('../db/notes', (req, res) => {
     noteStorage
         .retrieveNotes()
         .then((notes) => {
@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
 });
 
 // make new note
-router.post('/notes', (req, res) => {
+router.post('../db/notes', (req, res) => {
     noteStorage
         .saveNewNote(req.body)
         .then((newNote) => res.json(newNote))
@@ -22,7 +22,7 @@ router.post('/notes', (req, res) => {
 });
 
 // delete note/ notes
-router.delete('/notes/:id', (req, res) => {
+router.delete('../db/notes/:id', (req, res) => {
     noteStorage
         .eraseNoteById(req.params.id)
         .then(() => res.json({ success: true }))

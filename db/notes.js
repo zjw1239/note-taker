@@ -6,7 +6,7 @@ const { v1: uuidv1 } = require('uuid');
 class NoteStore {
     async retrieveData() {
         try {
-            const data = await fileSystem.readFile('db/dv.json', 'utf8');
+            const data = await fileSystem.readFile('db/db.json', 'utf8');
             return JSON.parse(data) || [];
         } catch (error) {
             return [];
