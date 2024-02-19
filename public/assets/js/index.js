@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
   let noteForm;
   let noteTitle;
   let noteText;
@@ -193,4 +193,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   getAndRenderNotes();
-});
